@@ -49,7 +49,7 @@ public interface MessageListenerConcurrently extends MessageListener {
 ```
 :::
 
-其中，msgs是从Broker端获取的需要被消费消息列表，用户实现该接口，并把自己对消息的消费逻辑写在consumeMessage方法中，然后返回消费状态，ConsumeConcurrentlyStatus.CONSUME_SUCCESS表示消费成功，或者表示RECONSUME_LATER表示消费失败，一段时间后再重新消费。
+其中，msgs是从Broker端获取的需要被消费消息列表，用户实现该接口，并把自己对消息的消费逻辑写在consumeMessage方法中，然后返回消费状态，ConsumeConcurrentlyStatus.CONSUME_SUCCESS表示消费成功，或者表示RECONSUME_LATER表示消费失败，一段时间后再重新消费。dd
 
 可以看到RocketMQ提供的消费者API却非常简单，用户并不需要关注重平衡或者拉取的逻辑，只需要写好自己的消费逻辑即可。
 
